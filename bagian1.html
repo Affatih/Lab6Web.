@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Latihan jQuery Dasar</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .merah { color: red; }
+  </style>
+</head>
+<body>
+  <h2 id="judul">Belajar jQuery</h2>
+  <p class="paragraf">Klik tombol di bawah ini untuk mengubah teks!</p>
+  <button id="ubahTeks">Ubah Teks</button>
+  <button id="sembunyikan">Sembunyikan Paragraf</button>
+
+  <script>
+    // Pastikan dokumen siap
+    $(document).ready(function() {
+      $("#ubahTeks").click(function() {
+        $(".paragraf").text("Teks ini diubah dengan jQuery!").addClass("merah");
+      });
+
+      $("#sembunyikan").click(function() {
+        $(".paragraf").hide();
+      });
+    });
+  </script>
+</body>
+</html>
